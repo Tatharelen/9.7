@@ -56,7 +56,7 @@ function newGame() {
 		setGameElements();
 
 		playerNameElem.innerHtml = player.name;
-		// setGamePoints(); // This function has not been created yet
+		setGamePoints(); // This function has not been created yet
 	}
 }  
 
@@ -101,4 +101,9 @@ function checkRoundWinner(playerPick, computerPick) {
 			computerResultElem.innerHtml = "Win!";
 			computer.score++;
 		} 
+}
+
+function setGamePoints() {
+	playerPointsElem.innerHtml = player.score;
+	computerPointsElem.innerHtml = computer.score;
 }
